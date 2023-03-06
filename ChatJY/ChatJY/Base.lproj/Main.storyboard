@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="87I-kC-r5c">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChatJY" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="H0c-kg-HS9">
+                                <rect key="frame" x="0.0" y="59" width="393" height="259"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rg3-XK-0MZ">
+                                <rect key="frame" x="159" y="733" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="generateText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pvv-BP-HM0"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YCI-hZ-jRO">
+                                <rect key="frame" x="20" y="679" width="353" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H0c-kg-HS9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9wf-HO-a2w"/>
+                            <constraint firstItem="rg3-XK-0MZ" firstAttribute="top" secondItem="YCI-hZ-jRO" secondAttribute="bottom" constant="20" id="Cbz-bU-n7P"/>
+                            <constraint firstItem="rg3-XK-0MZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-50" id="HJG-C8-zmL"/>
+                            <constraint firstItem="rg3-XK-0MZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VUq-Bz-Uxg"/>
+                            <constraint firstItem="YCI-hZ-jRO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aQA-8E-09T"/>
+                            <constraint firstItem="H0c-kg-HS9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bqN-y6-G7e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YCI-hZ-jRO" secondAttribute="trailing" constant="20" id="j6n-xc-PeH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="H0c-kg-HS9" secondAttribute="bottom" constant="500" id="x9d-Wk-uBu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H0c-kg-HS9" secondAttribute="trailing" id="zg1-9j-kA1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="generateButton" destination="rg3-XK-0MZ" id="yDf-2e-aMZ"/>
+                        <outlet property="promptTextField" destination="YCI-hZ-jRO" id="n0b-lf-Iif"/>
+                        <outlet property="textView" destination="H0c-kg-HS9" id="rE9-XU-Gxr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-27"/>
+        </scene>
+        <!--Chat Room View Controller-->
+        <scene sceneID="7Hq-UE-gGT">
+            <objects>
+                <viewController storyboardIdentifier="ChatRoomViewController" id="87I-kC-r5c" customClass="ChatRoomViewController" customModule="ChatJY" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mcq-zR-KkD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8uQ-bl-tVZ">
+                                <rect key="frame" x="0.0" y="159" width="393" height="559"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BotCell" rowHeight="100" id="nmE-zj-jlf" customClass="BotCell" customModule="ChatJY" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nmE-zj-jlf" id="pqL-fx-zpd">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Bot: 안녕하세요 " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="22o-uX-drq">
+                                                    <rect key="frame" x="20" y="16" width="200" height="68"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="gKa-GE-gwU"/>
+                                                    </constraints>
+                                                    <color key="textColor" systemColor="labelColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="22o-uX-drq" firstAttribute="leading" secondItem="pqL-fx-zpd" secondAttribute="leadingMargin" id="BVI-Z2-0ME"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="22o-uX-drq" secondAttribute="bottom" constant="5" id="Bj5-cV-gDU"/>
+                                                <constraint firstItem="22o-uX-drq" firstAttribute="top" secondItem="pqL-fx-zpd" secondAttribute="topMargin" constant="5" id="rCR-61-2IN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="botChatTextView" destination="22o-uX-drq" id="PRV-8c-0sL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" rowHeight="100" id="vGD-KA-qkx">
+                                        <rect key="frame" x="0.0" y="150" width="393" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vGD-KA-qkx" id="RCd-3x-se0">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="87I-kC-r5c" id="xd3-e4-OZM"/>
+                                    <outlet property="delegate" destination="87I-kC-r5c" id="Eb5-oI-eQq"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YzC-20-xtJ">
+                                <rect key="frame" x="180.66666666666666" y="738" width="32" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHj-3g-Pro">
+                                <rect key="frame" x="319" y="737.66666666666663" width="54" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="전송"/>
+                                <connections>
+                                    <action selector="textSend:" destination="87I-kC-r5c" eventType="touchUpInside" id="NGK-vk-5kY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wc4-om-RnW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YzC-20-xtJ" firstAttribute="top" secondItem="8uQ-bl-tVZ" secondAttribute="bottom" constant="20" id="Q3o-1q-0zE"/>
+                            <constraint firstItem="Wc4-om-RnW" firstAttribute="bottom" secondItem="8uQ-bl-tVZ" secondAttribute="bottom" constant="100" id="SKJ-Yl-04x"/>
+                            <constraint firstItem="8uQ-bl-tVZ" firstAttribute="top" secondItem="Wc4-om-RnW" secondAttribute="top" constant="100" id="eu2-Ss-882"/>
+                            <constraint firstItem="8uQ-bl-tVZ" firstAttribute="leading" secondItem="Wc4-om-RnW" secondAttribute="leading" id="fCV-jI-MUt"/>
+                            <constraint firstItem="Wc4-om-RnW" firstAttribute="trailing" secondItem="RHj-3g-Pro" secondAttribute="trailing" constant="20" id="fg2-H7-10e"/>
+                            <constraint firstItem="RHj-3g-Pro" firstAttribute="centerY" secondItem="YzC-20-xtJ" secondAttribute="centerY" id="j1P-Zp-hr8"/>
+                            <constraint firstItem="YzC-20-xtJ" firstAttribute="centerX" secondItem="Mcq-zR-KkD" secondAttribute="centerX" id="lcm-cV-31m"/>
+                            <constraint firstItem="Wc4-om-RnW" firstAttribute="trailing" secondItem="8uQ-bl-tVZ" secondAttribute="trailing" id="qZd-wb-wFk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ChatFrameTableView" destination="8uQ-bl-tVZ" id="xFg-a8-8s5"/>
+                        <outlet property="sendButton" destination="RHj-3g-Pro" id="lAF-j9-QaM"/>
+                        <outlet property="textField" destination="YzC-20-xtJ" id="omH-Ac-byT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ass-xE-u8C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="657.74647887323943"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
