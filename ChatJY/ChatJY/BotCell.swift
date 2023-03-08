@@ -16,9 +16,21 @@ class BotCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    private func configureCell(){
+    func configureCell(){
         self.botChatTextView.backgroundColor = .blue
-        self.botChatTextView.sizeToFit()
+        print(self.botChatTextView.frame.height)
+        print(self.botChatTextView.text)
+        sizing()
+        print(self.botChatTextView.frame.height)
+    }
+    
+    private func sizing(){
+        botChatTextView.isEditable = false
+        botChatTextView.isScrollEnabled = false
+        let fixedWidth = botChatTextView.frame.size.width
+        let newSize = botChatTextView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
+        botChatTextView.frame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height)
+
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

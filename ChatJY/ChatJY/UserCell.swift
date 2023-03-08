@@ -10,6 +10,8 @@ import UIKit
 class UserCell:UITableViewCell{
     
     
+    
+    @IBOutlet weak var userTextView: UITextView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
