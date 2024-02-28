@@ -16,6 +16,10 @@
 		E1C487DB2B8F189900DD2B2F /* CleanArchitecture_MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C487DA2B8F189900DD2B2F /* CleanArchitecture_MVVMTests.swift */; };
 		E1C487E52B8F189900DD2B2F /* CleanArchitecture_MVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C487E42B8F189900DD2B2F /* CleanArchitecture_MVVMUITests.swift */; };
 		E1C487E72B8F189900DD2B2F /* CleanArchitecture_MVVMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C487E62B8F189900DD2B2F /* CleanArchitecture_MVVMUITestsLaunchTests.swift */; };
+		E1C487F52B8F1E5900DD2B2F /* AppConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C487F42B8F1E5900DD2B2F /* AppConfigurations.swift */; };
+		E1C487F72B8F20FD00DD2B2F /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C487F62B8F20FD00DD2B2F /* AppFlowCoordinator.swift */; };
+		E1C487FA2B8F213E00DD2B2F /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C487F92B8F213E00DD2B2F /* AppDIContainer.swift */; };
+		E1C488042B8F28DE00DD2B2F /* CatsSearchFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C488032B8F28DE00DD2B2F /* CatsSearchFlowCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		E1C487E02B8F189900DD2B2F /* CleanArchitecture-MVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CleanArchitecture-MVVMUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1C487E42B8F189900DD2B2F /* CleanArchitecture_MVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanArchitecture_MVVMUITests.swift; sourceTree = "<group>"; };
 		E1C487E62B8F189900DD2B2F /* CleanArchitecture_MVVMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanArchitecture_MVVMUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E1C487F42B8F1E5900DD2B2F /* AppConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurations.swift; sourceTree = "<group>"; };
+		E1C487F62B8F20FD00DD2B2F /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
+		E1C487F92B8F213E00DD2B2F /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		E1C488032B8F28DE00DD2B2F /* CatsSearchFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsSearchFlowCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +107,15 @@
 		E1C487C22B8F189700DD2B2F /* CleanArchitecture-MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				E1C487C32B8F189700DD2B2F /* AppDelegate.swift */,
-				E1C487C52B8F189700DD2B2F /* SceneDelegate.swift */,
+				E1C487F32B8F1E4600DD2B2F /* Application */,
+				E1C487FB2B8F24F400DD2B2F /* Presentation */,
+				E1C487FD2B8F267D00DD2B2F /* Domain */,
 				E1C487C72B8F189700DD2B2F /* ViewController.swift */,
+				E1C487FE2B8F268400DD2B2F /* Data */,
 				E1C487C92B8F189700DD2B2F /* Main.storyboard */,
 				E1C487CC2B8F189900DD2B2F /* Assets.xcassets */,
+				E1C488002B8F26A000DD2B2F /* Common */,
+				E1C487FF2B8F268D00DD2B2F /* Resources */,
 				E1C487CE2B8F189900DD2B2F /* LaunchScreen.storyboard */,
 				E1C487D12B8F189900DD2B2F /* Info.plist */,
 			);
@@ -125,6 +137,86 @@
 				E1C487E62B8F189900DD2B2F /* CleanArchitecture_MVVMUITestsLaunchTests.swift */,
 			);
 			path = "CleanArchitecture-MVVMUITests";
+			sourceTree = "<group>";
+		};
+		E1C487F32B8F1E4600DD2B2F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E1C487C52B8F189700DD2B2F /* SceneDelegate.swift */,
+				E1C487C32B8F189700DD2B2F /* AppDelegate.swift */,
+				E1C487F42B8F1E5900DD2B2F /* AppConfigurations.swift */,
+				E1C487F62B8F20FD00DD2B2F /* AppFlowCoordinator.swift */,
+				E1C487F82B8F212F00DD2B2F /* DIContainer */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E1C487F82B8F212F00DD2B2F /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				E1C487F92B8F213E00DD2B2F /* AppDIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		E1C487FB2B8F24F400DD2B2F /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E1C488012B8F28AC00DD2B2F /* CatsScene */,
+				E1C487FC2B8F266500DD2B2F /* Utils */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		E1C487FC2B8F266500DD2B2F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E1C487FD2B8F267D00DD2B2F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		E1C487FE2B8F268400DD2B2F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E1C487FF2B8F268D00DD2B2F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E1C488002B8F26A000DD2B2F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E1C488012B8F28AC00DD2B2F /* CatsScene */ = {
+			isa = PBXGroup;
+			children = (
+				E1C488022B8F28CA00DD2B2F /* Flows */,
+			);
+			path = CatsScene;
+			sourceTree = "<group>";
+		};
+		E1C488022B8F28CA00DD2B2F /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				E1C488032B8F28DE00DD2B2F /* CatsSearchFlowCoordinator.swift */,
+			);
+			path = Flows;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +351,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1C487C82B8F189700DD2B2F /* ViewController.swift in Sources */,
+				E1C488042B8F28DE00DD2B2F /* CatsSearchFlowCoordinator.swift in Sources */,
 				E1C487C42B8F189700DD2B2F /* AppDelegate.swift in Sources */,
+				E1C487FA2B8F213E00DD2B2F /* AppDIContainer.swift in Sources */,
+				E1C487F72B8F20FD00DD2B2F /* AppFlowCoordinator.swift in Sources */,
 				E1C487C62B8F189700DD2B2F /* SceneDelegate.swift in Sources */,
+				E1C487F52B8F1E5900DD2B2F /* AppConfigurations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,8 +1,9 @@
-# kakao_postcode_page
+# CleanArchitecturePattern
 
 
-## 우편번호 검색 index.html
-https://youjunyong.github.io/kakao_postcode_page/
+API 
+https://developers.thecatapi.com/view-account/ylX4blBYT9FaoVd6OhvR?report=R0qdMcvVV
 
-## 카카오 우편번호 검색 서비스 
-https://postcode.map.daum.net/guide#attributes
+
+Reference
+https://github.com/kudoleh/iOS-Clean-Architecture-MVVM
